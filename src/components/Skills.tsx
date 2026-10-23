@@ -54,9 +54,14 @@ const skillCategories = [
   },
 ];
 
-const Skills = () => {
+type SkillsProps = {
+  /** Extra top spacing when this is the dedicated /skills route */
+  page?: boolean;
+};
+
+const Skills = ({ page = false }: SkillsProps) => {
   return (
-    <section id="skills" className={styles.skills}>
+    <section id="skills" className={`${styles.skills} ${page ? styles.page : ''}`}>
       <div className={styles.header}>
         <p className={styles.subtitle}>Technologies I use to ship Apps</p>
         <h2 className={styles.sectionTitle}>Skills</h2>

@@ -12,7 +12,7 @@ const About = () => {
     <section id="about" className={styles.about}>
       <div className={styles.container}>
         <div className={styles.left}>
-          <h2 className={styles.sectionTitle}>About Me</h2>
+          <h2 className={styles.sectionTitle}>Engineer who cares about the product, not just the code.</h2>
           <div className={styles.overview}>
             <p className={styles.overviewText}>
               I’m a Full Stack Developer with 2+ years of hands-on experience building mobile and web applications using Flutter, Django, and React.

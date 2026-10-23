@@ -8,7 +8,7 @@ export const metadata = {
 export default function SkillsPage() {
   return (
     <>
-      <Skills />
+      <Skills page />
     </>
   );
 }

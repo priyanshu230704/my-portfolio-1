@@ -12,12 +12,15 @@ const experiences: ExperienceItem[] = [
   {
     role: "Full Stack Developer",
     company: "16Arena Labs",
-    startDate: "2026-04",
+    startDate: "2025-08",
     endDate: null,
     achievements: [
-      "Leading the development of the 16Arena ecosystem, focusing on scalable tournament management systems",
-      "Architecting real-time features and optimizing application performance across mobile and web platforms",
-      "Collaborating with cross-functional teams to deliver high-quality features and improve user engagement"
+      "Developed 16Arena, a Flutter-based esports tournament platform featuring real-time chat, push notifications, and integrated team and organization workflows",
+      "Built 16TMS, a tournament management system for organizing and managing esports tournaments across multiple games",
+      "Developed 16Arena Shop, an inventory management and e-commerce system integrated with the Flutter application and web storefront using a third-party provider SDK",
+      "Integrated Razorpay payment processing, implementing end-to-end cart, checkout, and invoice generation workflows",
+      "Developed a React.js admin panel to manage platform operations and interconnected data across organizations, teams, and users",
+      "Continued development of 16Score, an esports platform for live scores and match statistics, following its acquisition by 16Arena Labs"
     ]
   },
   {
@@ -26,42 +29,23 @@ const experiences: ExperienceItem[] = [
     startDate: "2025-12",
     endDate: null,
     achievements: [
-      "Developed a restaurant discovery and live deals platform with QR-based offer redemption and table reservations",
-      "Built role-based dashboards using Django and PostgreSQL for efficient restaurant management",
-      "Managed deployment and server hosting on Amazon Web Services, including application setup, updates, and production maintenance"
+      "Developed Discount Buddy, a restaurant discovery and live deals platform featuring QR-based offer redemption, table reservations, and real-time deal updates.",
+      "Built and integrated Flutter application features with Django REST APIs, implementing role-based authentication and restaurant management dashboards backed by PostgreSQL.",
+      "Managed AWS production deployment and server maintenance, including application updates, service configuration, and production troubleshooting"
     ]
   },
   {
     role: "Full Stack Developer",
-    company: "16score · Full-time",
-    startDate: "2025-04",
-    endDate: null,
-    achievements: [
-      "Contributed to 16Score, an esports platform providing live scores and match statistics",
-      "Developed end-to-end features for live score updates, match stats, and complex API integrations",
-      "Improved UI responsiveness and backend application performance"
-    ]
-  },
-  {
-    role: "Full Stack Developer",
-    company: "MetaNinza · Full-time",
-    startDate: "2025-08",
-    endDate: "2026-04",
-    achievements: [
-      "Developed 16Arena, a Flutter-based tournament management application with a Django backend",
-      "Implemented features like tournament management, shop module, real-time chat, and push notifications",
-      "Built interconnected systems for organizations, teams, and users with real-time data handling"
-    ]
-  },
-  {
-    role: "Full Stack Developer",
-    company: "Bluexkye",
+    company: "Bluexkye Softwares",
     startDate: "2025-02",
-    endDate: "2025-04",
+    endDate: "2025-08",
     achievements: [
       "Worked with React, Django, MySQL, and PostgreSQL to build web applications",
       "Developed frontend components, backend APIs, and database models",
-      "Gained experience in REST API integration and full-stack development workflows"
+      "Gained experience in REST API integration and full-stack development workflows",
+      "Contributed to 16Score, an esports platform providing live scores and match statistics",
+      "Developed end-to-end features for live score updates, match stats, and complex API integrations",
+      "Improved UI responsiveness and backend application performance"
     ]
   }
 ];

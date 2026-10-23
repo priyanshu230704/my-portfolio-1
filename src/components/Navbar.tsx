@@ -7,7 +7,7 @@ import styles from './Navbar.module.css';
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/#skills', label: 'Skills' },
+  { href: '/skills', label: 'Skills' },
   { href: '/projects', label: 'Projects' },
   { href: '/resume', label: 'Resume' },
 ];
