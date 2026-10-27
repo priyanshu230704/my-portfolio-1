@@ -63,7 +63,7 @@ const Skills = ({ page = false }: SkillsProps) => {
   return (
     <section id="skills" className={`${styles.skills} ${page ? styles.page : ''}`}>
       <div className={styles.header}>
-        <p className={styles.subtitle}>Technologies I use to ship Apps</p>
+        <p className={styles.subtitle}>Technologies I use to ship apps</p>
         <h2 className={styles.sectionTitle}>Skills</h2>
       </div>
       

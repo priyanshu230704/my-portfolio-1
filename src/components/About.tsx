@@ -4,7 +4,7 @@ import styles from './About.module.css';
 const stats = [
   { label: "Projects Completed", value: "10+" },
   { label: "Technologies Worked With", value: "10+" },
-  { label: "Hands-on Experience", value: "2+ Years" }
+  { label: "Mobile app development", value: "2.5+ Years" }
 ];
 
 const About = () => {
@@ -15,7 +15,7 @@ const About = () => {
           <h2 className={styles.sectionTitle}>Engineer who cares about the product, not just the code.</h2>
           <div className={styles.overview}>
             <p className={styles.overviewText}>
-              I’m a Full Stack Developer with 2+ years of hands-on experience building mobile and web applications using Flutter, Django, and React.
+              I’m a Full Stack Developer with more than 2.5 years of hands-on experience building mobile applications, along with web backends and UIs using Flutter, Django, and React.
             </p>
           </div>
           <p className={styles.text}>

@@ -1,5 +1,6 @@
 .resumeContainer {
-  padding: var(--section-padding) 20px;
+  padding-top: var(--page-top);
+  padding-bottom: var(--section-padding-y);
   max-width: 1000px;
   margin: 0 auto;
 }

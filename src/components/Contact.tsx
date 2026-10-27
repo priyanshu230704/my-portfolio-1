@@ -8,7 +8,7 @@ const Contact = () => {
       <div className={styles.container}>
         <h2 className={styles.title}>Have a project? Let&apos;s talk.</h2>
         <p className={styles.subtext}>
-          I&apos;m currently available for freelance work and full-time opportunities. 
+          I&apos;m available for freelance, remote, and full-time opportunities. 
           Feel free to reach out via any of the channels below.
         </p>
         

@@ -159,6 +159,13 @@ const companyProjects: Project[] = [
   }
 ];
 
+/** Flagship work shown on the home page (client, personal, company). */
+export const homePreviewProjects: Project[] = [
+  featuredProjects[1],
+  featuredProjects[0],
+  companyProjects[0],
+];
+
 const AUTO_SCROLL_MS = 5000;
 const CAROUSEL_GAP = 24;
 

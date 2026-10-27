@@ -1,5 +1,5 @@
 .footer {
-  padding: 40px 0;
+  padding: 3rem 0;
   border-top: 1px solid var(--border);
   background: var(--background);
 }
@@ -8,9 +8,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: var(--container-width);
+  max-width: var(--page-max);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--page-gutter);
 }
 
 .left p {

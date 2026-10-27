@@ -1,9 +1,7 @@
 .projects {
-  padding: var(--section-padding) 40px;
-  max-width: 1280px;
+  padding-top: var(--page-top);
+  padding-bottom: var(--section-padding-y);
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .sectionWrapper {
@@ -27,6 +25,7 @@
   font-size: 3.5rem;
   margin-bottom: 16px;
   font-weight: 800;
+  line-height: 1.2;
 }
 
 .sectionSubtitle {
@@ -161,11 +160,7 @@
 
 @media (max-width: 768px) {
   .projects {
-    padding-top: 100px;
-  }
-
-  .projects {
-    padding: 100px 16px 80px;
+    padding-bottom: 5rem;
   }
 
   .sectionWrapper {

@@ -11,6 +11,10 @@ const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: '--font-pl
 export const metadata: Metadata = {
   title: "Priyanshu Chavda | Full Stack Developer",
   description: "Full Stack Developer focused on building high-performance, visually polished web applications.",
+  icons: {
+    icon: "/icon.svg",
+    apple: "/apple-icon.svg",
+  },
 };
 
 export default function RootLayout({
