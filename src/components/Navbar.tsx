@@ -3,17 +3,20 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Code2 } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 import styles from './Navbar.module.css';
 
 const homeSections = [
   { href: '/#skills', label: 'Skills' },
   { href: '/#projects', label: 'Projects' },
+  { href: '/work', label: 'Work' },
   { href: '/#experience', label: 'Experience' },
   { href: '/#faq', label: 'FAQ' },
   { href: '/#contact', label: 'Contact' },
 ];
 
 const navItems = [
+  { href: '/work', label: 'Work' },
   { href: '/about', label: 'About' },
   { href: '/projects', label: 'Projects' },
   { href: '/resume', label: 'Resume' },
@@ -112,6 +115,9 @@ const Navbar = () => {
             </li>
           ))}
           <li>
+            <ThemeToggle />
+          </li>
+          <li>
             <Link href="/#contact" className={styles.contactBtn}>
               Hire Me
             </Link>
@@ -155,6 +161,10 @@ const Navbar = () => {
         </ul>
 
         <div className={styles.mobileMenuFooter}>
+          <div className={styles.mobileThemeRow}>
+            <ThemeToggle />
+            <span>Theme</span>
+          </div>
           <Link href="/#contact" className={styles.mobileContactBtn} onClick={closeMenu}>
             Hire Me
           </Link>

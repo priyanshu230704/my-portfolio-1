@@ -10,6 +10,8 @@ export type Project = {
   tags: string[];
   features?: string[];
   liveLink?: string;
+  playStoreLink?: string;
+  appStoreLink?: string;
   githubLink?: string;
   image?: string;
   previewImages?: { title: string; src: string }[];
@@ -46,7 +48,10 @@ const featuredProjects: Project[] = [
       "Integrated Firebase for push notifications and analytics on both backend and app side",
       "Contributed to AWS deployment, server hosting, and production environment management"
     ],
-    liveLink: "https://play.google.com/store/apps/details?id=com.discountbuddy.app"
+    playStoreLink:
+      "https://play.google.com/store/apps/details?id=com.discountbuddy.app",
+    appStoreLink:
+      "https://apps.apple.com/in/app/discount-buddy-deals/id6760362068",
   },
   {
     title: "ChitChat (Personal Project)",
@@ -110,7 +115,10 @@ const companyProjects: Project[] = [
       "Redesigned the application with a modern premium UI, custom animations, and improved typography.",
       "Optimized app performance and navigation using GetX state management with efficient local caching."
     ],
-    liveLink: "https://play.google.com/store/apps/details?id=com.bluexkye.sixteenscore"
+    playStoreLink:
+      "https://play.google.com/store/apps/details?id=com.bluexkye.sixteenscore",
+    appStoreLink:
+      "https://apps.apple.com/in/app/16score-live-esports-scores/id6751777140",
   },
   {
     title: "16Arena",
@@ -133,7 +141,10 @@ const companyProjects: Project[] = [
       "Improved app performance and navigation using GetX state management.",
       "Integrated monetization features such as offerwalls and wallet balance management."
     ],
-    liveLink: "https://play.google.com/store/apps/details?id=com.sixteenarena.app"
+    playStoreLink:
+      "https://play.google.com/store/apps/details?id=com.sixteenarena.app",
+    appStoreLink:
+      "https://apps.apple.com/in/app/16arena-games-esports-shop/id6759313578",
   },
   {
     title: "16Arena Shop",

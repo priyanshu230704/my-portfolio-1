@@ -34,7 +34,7 @@
   background: rgba(37, 211, 102, 0.08);
   font-size: 0.85rem;
   font-weight: 500;
-  color: #a7f3d0;
+  color: var(--badge-text);
   letter-spacing: 0.02em;
 }
 
@@ -48,11 +48,16 @@
 }
 
 .title {
+  font-family: var(--font-display);
   font-size: 3.1rem;
   line-height: 1.12;
   margin-bottom: 16px;
-  font-weight: 800;
-  background: linear-gradient(to bottom right, #fff 30%, #94A3B8);
+  font-weight: 400;
+  background: linear-gradient(
+    to bottom right,
+    var(--hero-gradient-start) 30%,
+    var(--hero-gradient-end)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -138,7 +143,7 @@
 
 .codePre {
   margin: 0;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-family: var(--font-mono);
   font-size: 0.78rem;
   line-height: 1.65;
   color: #e6edf3;
@@ -231,7 +236,7 @@
   grid-template-columns: repeat(4, 1fr);
   border: 1px solid var(--border);
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--surface-subtle-2);
   overflow: hidden;
 }
 
@@ -252,7 +257,7 @@
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: #fff;
+  color: var(--heading);
   line-height: 1;
 }
 

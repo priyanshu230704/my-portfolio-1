@@ -17,7 +17,7 @@
 .title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #fff;
+  color: var(--heading);
 }
 
 .downloadBtn {
@@ -55,8 +55,8 @@
 .documentWrapper {
   display: flex;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--surface-subtle-2);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 20px;
   overflow-x: auto;

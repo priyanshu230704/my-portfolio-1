@@ -6,7 +6,11 @@
 .inner {
   border: 1px solid var(--border);
   border-radius: 20px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  background: linear-gradient(
+    145deg,
+    var(--surface-subtle) 0%,
+    var(--surface-subtle-2) 100%
+  );
   padding: 40px;
 }
 
@@ -33,7 +37,7 @@
   margin: 0 0 10px;
   font-size: 2rem;
   font-weight: 800;
-  color: #fff;
+  color: var(--heading);
   line-height: 1.2;
 }
 
@@ -55,7 +59,7 @@
 }
 
 .link:hover {
-  color: #fff;
+  color: var(--heading);
 }
 
 .grid {
@@ -76,7 +80,7 @@
   padding: 16px 18px;
   border-radius: 12px;
   border: 1px solid var(--border);
-  background: rgba(8, 10, 17, 0.5);
+  background: var(--surface-subtle);
 }
 
 .cardLabel {
@@ -92,7 +96,7 @@
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.55;
-  color: #e2e8f0;
+  color: var(--text-body);
 }
 
 .metrics {
@@ -115,7 +119,7 @@
   font-family: var(--font-heading);
   font-size: 0.95rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--heading);
   margin-bottom: 4px;
 }
 
@@ -133,7 +137,7 @@
 }
 
 .stackLabel {
-  color: #fff;
+  color: var(--heading);
   font-weight: 600;
   margin-right: 8px;
 }

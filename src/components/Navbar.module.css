@@ -6,7 +6,7 @@
   height: var(--nav-height);
   display: flex;
   align-items: center;
-  background: rgba(8, 10, 17, 0.92);
+  background: var(--nav-bg);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
@@ -49,7 +49,7 @@
 
 .logoPrimary {
   font-weight: 800;
-  color: #fff;
+  color: var(--heading);
 }
 
 .logoSecondary {
@@ -69,7 +69,7 @@
   align-items: center;
   gap: 4px;
   font-weight: 500;
-  color: #cbd5e1;
+  color: var(--text-body);
   font-size: 0.95rem;
   text-decoration: none;
   background: none;
@@ -82,7 +82,7 @@
 
 .navLink:hover,
 .navLinkActive {
-  color: #fff;
+  color: var(--heading);
 }
 
 .dropdownWrap {
@@ -113,8 +113,8 @@
   padding: 8px;
   border-radius: 12px;
   border: 1px solid var(--border);
-  background: #0f1419;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  background: var(--surface-elevated);
+  box-shadow: var(--dropdown-shadow);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -134,14 +134,14 @@
   border-radius: 8px;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #cbd5e1;
+  color: var(--text-body);
   text-decoration: none;
   transition: background 0.15s ease, color 0.15s ease;
 }
 
 .dropdownItem:hover {
-  background: rgba(255, 255, 255, 0.06);
-  color: #fff;
+  background: var(--surface-hover);
+  color: var(--heading);
 }
 
 .contactBtn {
@@ -150,7 +150,7 @@
   justify-content: center;
   background: var(--primary) !important;
   border: 1px solid var(--primary);
-  color: #fff !important;
+  color: var(--on-primary) !important;
   padding: 10px 22px;
   border-radius: 10px;
   font-size: 0.9rem;
@@ -193,8 +193,8 @@
     gap: 5px;
     width: 40px;
     height: 40px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--surface-subtle);
+    border: 1px solid var(--border);
     border-radius: 10px;
     cursor: pointer;
     z-index: 1002;
@@ -206,7 +206,7 @@
     width: 18px;
     height: 2px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: var(--heading);
   }
 
   .menuToggleHidden {
@@ -218,7 +218,7 @@
     display: block;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.75);
+    background: var(--overlay-scrim);
     backdrop-filter: blur(8px);
     z-index: 1000;
     opacity: 0;
@@ -239,8 +239,8 @@
     right: 0;
     width: min(100%, 360px);
     height: 100dvh;
-    background: linear-gradient(180deg, #0f1419 0%, #080a11 100%);
-    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--background);
+    border-left: 1px solid var(--border);
     z-index: 1001;
     padding: 20px 24px 28px;
     transform: translateX(100%);
@@ -258,7 +258,7 @@
     justify-content: space-between;
     padding-bottom: 24px;
     margin-bottom: 8px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--border);
   }
 
   .mobileMenuLabel {
@@ -275,8 +275,8 @@
     justify-content: center;
     width: 36px;
     height: 36px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--surface-subtle);
+    border: 1px solid var(--border);
     border-radius: 10px;
     cursor: pointer;
     position: relative;
@@ -286,7 +286,7 @@
     position: absolute;
     width: 16px;
     height: 2px;
-    background: #fff;
+    background: var(--heading);
     border-radius: 2px;
   }
 
@@ -328,20 +328,31 @@
     padding: 14px;
     font-size: 1.05rem;
     font-weight: 600;
-    color: #e2e8f0;
+    color: var(--text-body);
     text-decoration: none;
     border-radius: 12px;
     transition: background 0.2s ease, color 0.2s ease;
   }
 
   .mobileNavLinks li a:hover {
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff;
+    background: var(--surface-hover);
+    color: var(--heading);
   }
 
   .mobileMenuFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid var(--border);
+  }
+
+  .mobileThemeRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 0.9rem;
   }
 
   .mobileContactBtn {
@@ -351,7 +362,7 @@
     width: 100%;
     padding: 14px 20px;
     background: var(--primary);
-    color: #fff !important;
+    color: var(--on-primary) !important;
     font-size: 0.95rem;
     font-weight: 600;
     border-radius: 12px;

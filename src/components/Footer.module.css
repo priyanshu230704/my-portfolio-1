@@ -30,7 +30,7 @@
 }
 
 .links li a:hover {
-  color: #fff;
+  color: var(--heading);
 }
 
 @media (max-width: 640px) {

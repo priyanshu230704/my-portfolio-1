@@ -9,6 +9,7 @@ const Footer = () => {
         </div>
         <div className={styles.right}>
           <ul className={styles.links}>
+            <li><a href="/work">Work</a></li>
             <li><a href="/projects">Projects</a></li>
             <li><a href="/#skills">Skills</a></li>
             <li><a href="/about">About</a></li>

@@ -12,9 +12,10 @@
 }
 
 .title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #fff;
+  font-family: var(--font-sans);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: var(--heading);
   margin: 0 0 12px;
 }
 
@@ -38,17 +39,17 @@
   position: relative;
   border: 1px solid var(--border);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--surface-subtle-2);
   transition: border-color 0.2s ease, background 0.2s ease;
 }
 
 .itemOpen {
   border-color: rgba(59, 130, 246, 0.35);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--surface-subtle);
 }
 
 .item:hover {
-  border-color: rgba(255, 255, 255, 0.14);
+  border-color: color-mix(in srgb, var(--border) 70%, var(--primary) 30%);
 }
 
 .question {
@@ -60,7 +61,7 @@
   padding: 18px 20px;
   border: none;
   background: transparent;
-  color: #fff;
+  color: var(--heading);
   font-family: var(--font-sans);
   font-size: 0.95rem;
   font-weight: 600;

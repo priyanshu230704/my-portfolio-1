@@ -4,7 +4,26 @@ import styles from './About.module.css';
 const stats = [
   { label: "Projects Completed", value: "10+" },
   { label: "Technologies Worked With", value: "10+" },
-  { label: "Mobile app development", value: "2.5+ Years" }
+  { label: "Mobile app development", value: "2.5+ Years" },
+];
+
+const rightNow = [
+  {
+    label: "Building",
+    text: "Esports and commerce products at 16Arena Labs — Flutter apps, Django APIs, and the React admin panel.",
+  },
+  {
+    label: "Client work",
+    text: "DiscountBuddy — restaurant deals, QR flows, and AWS production for a live Play Store app.",
+  },
+  {
+    label: "Open to",
+    text: "Remote freelance contracts and full-time roles where I can own features end to end.",
+  },
+  {
+    label: "Interested in",
+    text: "Small teams shipping real products — mobile, APIs, payments, and whatever breaks that week.",
+  },
 ];
 
 const About = () => {
@@ -12,24 +31,40 @@ const About = () => {
     <section id="about" className={styles.about}>
       <div className={styles.container}>
         <div className={styles.left}>
-          <h2 className={styles.sectionTitle}>Engineer who cares about the product, not just the code.</h2>
+          <p className={styles.eyebrow}>about</p>
+          <h2 className={styles.sectionTitle}>
+            Engineer who cares about the product, not just the code.
+          </h2>
           <div className={styles.overview}>
             <p className={styles.overviewText}>
-              I’m a Full Stack Developer with more than 2.5 years of hands-on experience building mobile applications, along with web backends and UIs using Flutter, Django, and React.
+              I&apos;m a full-stack developer with more than 2.5 years shipping mobile
+              apps — plus Django backends and React UIs that stay usable after launch.
             </p>
           </div>
           <p className={styles.text}>
-            I focus on solving practical problems — from streamlining business workflows to building real-time data-driven applications. For example, I built a custom invoice system that eliminated repetitive manual design work, reducing invoice generation time from minutes to seconds.
+            I care more about whether we&apos;re solving the right problem than about
+            which framework badge goes on the slide. I&apos;ll tell you early if a
+            timeline is tight or a scope needs cutting — I&apos;d rather reset on day
+            one than ship the wrong thing on time.
           </p>
           <p className={styles.text}>
-            I’ve developed and deployed multiple production-ready applications, handling everything from UI development to backend APIs, database design, and cloud deployment.
+            I&apos;ve taken products from rough prototypes to production: Play Store
+            releases, payment flows, admin tools, and the boring work that keeps them
+            running (deployments, auth, monitoring-minded fixes).
           </p>
-          <p className={styles.text}>
-            My strength lies in building fast, reliable, and maintainable systems with clean architecture and a strong focus on user experience — not just writing code, but delivering usable products.
-          </p>
-          <p className={styles.text}>
-            Currently, I’m looking for freelance or full-time opportunities where I can work on challenging problems, ship real products, and continue improving as an engineer.
-          </p>
+
+          <div className={styles.rightNow}>
+            <h3 className={styles.rightNowTitle}>Right now</h3>
+            <div className={styles.rightNowGrid}>
+              {rightNow.map((item) => (
+                <div key={item.label} className={styles.rightNowItem}>
+                  <span className={styles.rightNowLabel}>{item.label}</span>
+                  <p className={styles.rightNowText}>{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className={styles.stats}>
             {stats.map((stat, index) => (
               <div key={index} className={styles.stat}>

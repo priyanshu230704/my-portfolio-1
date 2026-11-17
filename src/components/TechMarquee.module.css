@@ -30,7 +30,7 @@
   padding: 10px 18px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--surface-subtle-2);
   color: var(--muted);
   font-size: 0.9rem;
   font-weight: 500;
@@ -39,7 +39,7 @@
 }
 
 .item:hover {
-  color: #fff;
+  color: var(--heading);
   border-color: rgba(37, 99, 235, 0.45);
   background: rgba(37, 99, 235, 0.08);
 }

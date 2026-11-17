@@ -4,7 +4,10 @@ import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Eye, X, ChevronLeft, ChevronRight, Check, ArrowUpRight } from 'lucide-react';
+import { ProjectStoreLinks } from './store/ProjectStoreLinks';
+import { getStoreKind } from '@/lib/storeUrls';
+import extStyles from './store/StoreHoverCard.module.css';
 import styles from './ProjectCard.module.css';
 
 export interface PreviewImage {
@@ -18,6 +21,8 @@ interface ProjectProps {
   image?: string;
   tags: string[];
   liveLink?: string;
+  playStoreLink?: string;
+  appStoreLink?: string;
   githubLink?: string;
   features?: string[];
   compact?: boolean;
@@ -30,6 +35,8 @@ const ProjectCard = ({
   image,
   tags,
   liveLink,
+  playStoreLink,
+  appStoreLink,
   githubLink,
   features,
   compact,
@@ -60,42 +67,105 @@ const ProjectCard = ({
 
   const currentPreview = previewImages ? previewImages[activeImageIndex] : null;
 
+  // "DiscountBuddy (Client Project)" -> name + badge
+  const badgeMatch = title.match(/^(.*?)\s*\(([^)]+)\)\s*$/);
+  const name = badgeMatch ? badgeMatch[1] : title;
+  const badge = badgeMatch ? badgeMatch[2] : null;
+
+  const maxFeatures = compact ? 3 : 5;
+  const maxTags = compact ? 5 : 8;
+  const shownFeatures = features?.slice(0, maxFeatures);
+  const shownTags = tags.slice(0, maxTags);
+  const hiddenTags = tags.length - shownTags.length;
+  const playUrl =
+    playStoreLink ??
+    (liveLink && getStoreKind(liveLink) === 'play' ? liveLink : undefined);
+  const appleUrl =
+    appStoreLink ??
+    (liveLink && getStoreKind(liveLink) === 'apple' ? liveLink : undefined);
+  const webUrl =
+    liveLink && !getStoreKind(liveLink) ? liveLink : undefined;
+  const hasStoreLinks = Boolean(playUrl || appleUrl);
+  const hasActions = Boolean(
+    previewImages?.length || webUrl || githubLink || hasStoreLinks,
+  );
+
   return (
     <>
-      <motion.div
-        whileHover={compact ? undefined : { y: -10, scale: 1.02 }}
+      <motion.article
+        whileHover={compact ? undefined : { y: -3 }}
         className={`${styles.card} ${compact ? styles.compact : ''}`}
       >
-        <div className={styles.content}>
-          <h3 className={styles.title}>{title}</h3>
+        <div className={styles.body}>
+          {badge && <span className={styles.badge}>{badge}</span>}
+          <h3 className={styles.title}>{name}</h3>
           <p className={styles.description}>{description}</p>
-          {features && (
+
+          {shownFeatures && shownFeatures.length > 0 && (
             <ul className={styles.features}>
-              {features.map((feature, index) => (
-                <li key={index}>{feature}</li>
+              {shownFeatures.map((feature, index) => (
+                <li key={index}>
+                  <Check size={14} className={styles.featureIcon} aria-hidden />
+                  <span>{feature}</span>
+                </li>
               ))}
             </ul>
           )}
+
           <div className={styles.tags}>
-            {tags.map((tag, index) => (
+            {shownTags.map((tag, index) => (
               <span key={index} className={styles.tag}>{tag}</span>
             ))}
-          </div>
-          <div className={styles.buttons}>
-            {previewImages && previewImages.length > 0 && (
-              <button
-                type="button"
-                onClick={() => setIsModalOpen(true)}
-                className="btn btn-primary btn-sm"
-              >
-                View Preview
-              </button>
-            )}
-            {liveLink && <a href={liveLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">Live Demo</a>}
-            {githubLink && <a href={githubLink} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm">GitHub</a>}
+            {hiddenTags > 0 && <span className={styles.tagMore}>+{hiddenTags}</span>}
           </div>
         </div>
-      </motion.div>
+
+        {hasActions && (
+          <div className={styles.footer}>
+            <div className={styles.footerLinks}>
+              {previewImages && previewImages.length > 0 && (
+                <button
+                  type="button"
+                  onClick={() => setIsModalOpen(true)}
+                  className={`${extStyles.ext} ${styles.footerExtBtn}`}
+                >
+                  preview
+                  <Eye className={extStyles.extIcon} size={11} aria-hidden />
+                </button>
+              )}
+              {webUrl && (
+                <a
+                  href={webUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={extStyles.ext}
+                >
+                  live demo
+                  <ArrowUpRight className={extStyles.extIcon} aria-hidden />
+                </a>
+              )}
+              {githubLink && (
+                <a
+                  href={githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={extStyles.ext}
+                >
+                  github
+                  <ArrowUpRight className={extStyles.extIcon} aria-hidden />
+                </a>
+              )}
+            </div>
+            {hasStoreLinks && (
+              <ProjectStoreLinks
+                appName={name}
+                playStore={playUrl}
+                appStore={appleUrl}
+              />
+            )}
+          </div>
+        )}
+      </motion.article>
 
       {/* Clean Fullscreen Portal Lightbox */}
       {mounted && createPortal(

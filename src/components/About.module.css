@@ -13,14 +13,27 @@
   flex: 1;
 }
 
+.eyebrow {
+  font-size: 0.8rem;
+  text-transform: lowercase;
+  letter-spacing: 0.08em;
+  color: var(--primary-light);
+  margin: 0 0 12px;
+  font-family: var(--font-mono);
+}
+
 .sectionTitle {
-  font-size: 3rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 400;
+  font-style: italic;
   margin-bottom: 32px;
+  line-height: 1.15;
 }
 
 .overview {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--surface-subtle);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 24px;
   margin-bottom: 32px;
@@ -28,17 +41,62 @@
 
 .overviewText {
   font-size: 1.15rem;
-  color: #fff;
+  color: var(--heading);
   line-height: 1.8;
   margin: 0;
   font-weight: 500;
 }
 
 .text {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--muted);
   margin-bottom: 24px;
-  line-height: 1.8;
+  line-height: 1.75;
+}
+
+.rightNow {
+  margin: 40px 0 8px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.rightNowTitle {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0 0 20px;
+}
+
+.rightNowGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.rightNowItem {
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface-subtle-2);
+}
+
+.rightNowLabel {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary-light);
+  margin-bottom: 8px;
+  font-family: var(--font-mono);
+}
+
+.rightNowText {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-body);
 }
 
 .stats {
@@ -158,6 +216,10 @@
   .profileWrapper::before {
     top: 10px;
     left: 10px;
+  }
+
+  .rightNowGrid {
+    grid-template-columns: 1fr;
   }
 }
 
